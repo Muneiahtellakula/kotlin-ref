@@ -1,5 +1,8 @@
 package com.muni.databinding
 
+import android.content.Intent
+import android.content.Intent.ACTION_VIEW
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -18,6 +21,15 @@ lateinit var databinding:ActivityMainBinding
         databinding.button.setOnClickListener { setName() }
         //for dice task realted databinding
         databinding.btnPlayer1.setOnClickListener { roll_plaer1() }
+        databinding.implicitButton.setOnClickListener { openBroswer() }
+    }
+
+    private fun openBroswer() {
+       // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val i =Intent()
+        i.setAction(ACTION_VIEW)
+        i.setData((Uri.parse("https://github.com/Muneiahtellakula")))
+        startActivity(i)
     }
 
     private fun roll_plaer1() {
@@ -68,6 +80,9 @@ lateinit var databinding:ActivityMainBinding
         databinding.n=d
       /*  val d = Name(n)
         databinding.n = d*/
+        val intent=Intent(this,SecondActivity::class.java)
+        intent.putExtra("msg",n)
+        startActivity(intent)
 
     }
     private fun displayDic(r: Int) {

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondActivity"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_second"
+            android:text="text"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="250dp"
+            android:id="@+id/iv_second"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:id="@+id/text_view_date_1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_date_1"
+            android:text="PIC Calender"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>
