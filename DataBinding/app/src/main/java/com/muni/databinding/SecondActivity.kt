@@ -20,9 +20,9 @@ class SecondActivity : AppCompatActivity() {
 lateinit var databinding:ActivitySecondBinding
 
     //for Calender date picker
-    var cal = Calendar.getInstance()
-    var button_date: Button? = null
-    var textview_date: TextView? = null
+        var cal = Calendar.getInstance()
+        var button_date: Button? = null
+        var textview_date: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

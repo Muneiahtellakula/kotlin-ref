@@ -1,0 +1,2 @@
+rootProject.name='Chardes Game'
+include ':app'
