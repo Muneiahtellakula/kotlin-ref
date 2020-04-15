@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">NewExample</string>
-    <string name="custom">Count is:</string>
+    <string name="custom">Count is:%d</string>
 </resources>
