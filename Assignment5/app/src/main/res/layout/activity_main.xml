@@ -10,70 +10,62 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView_value"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
+            android:gravity="center"
+            android:textSize="30sp"
             android:layout_marginTop="47dp"
-            android:text="TextView"
-            app:layout_constraintStart_toStartOf="@+id/button3"
+            android:text="value"
+            app:layout_constraintStart_toStartOf="@+id/button_update"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
-            android:text="Button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
-            app:layout_constraintStart_toStartOf="@+id/tv_top"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-        <TextView
-            android:id="@+id/tv_top"
-            android:layout_width="174dp"
-            android:layout_height="39dp"
-            android:gravity="center"
-            android:text="Hello World!"
-            android:textSize="30sp"
+            android:id="@+id/button_update"
+            android:layout_width="405dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="12dp"
+            android:text="update value"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_value" />
 
         <Button
             android:id="@+id/button_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
             android:text="next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_middle"
-            app:layout_constraintTop_toBottomOf="@+id/tv_top" />
+            app:layout_constraintTop_toBottomOf="@+id/button_update" />
 
         <Button
             android:id="@+id/button_prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
             android:text="previoues"
             app:layout_constraintEnd_toStartOf="@+id/tv_middle"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_top" />
+            app:layout_constraintTop_toTopOf="@+id/tv_middle" />
 
         <TextView
             android:id="@+id/tv_middle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="76dp"
             android:gravity="center"
-            android:text="TextView"
+            android:text="value"
             android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@+id/button_next"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_prev"
-            app:layout_constraintTop_toTopOf="@+id/tv_top" />
+            app:layout_constraintTop_toBottomOf="@+id/button_update" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
