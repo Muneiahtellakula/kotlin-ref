@@ -71,8 +71,7 @@ class MainActivity : AppCompatActivity() {
         val path_plus_exten:String=path+"."+exten
         Log.i("imgurl",path_plus_exten)
         tv_dec.text=descrtiption
-        //Glide.with(this).load(path_plus_exten).into(iv)
-            Glide.with(this)
+        Glide.with(this).load(path_plus_exten).into(iv)
         tv.text = name
 
 
