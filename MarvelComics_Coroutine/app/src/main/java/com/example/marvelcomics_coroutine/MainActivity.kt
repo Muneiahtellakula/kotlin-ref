@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         Log.i("imgurl",path_plus_exten)
         tv_dec.text=descrtiption
         Glide.with(this).load(path_plus_exten).into(iv)
+       // Picasso.get().load(path_plus_exten).placeholder(R.mipmap.ic_launcher).into(iv)
         tv.text = name
 
 
