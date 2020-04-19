@@ -13,7 +13,7 @@ interface StudentDao {
 
     @Query("select * from student_details")
     fun getAll():LiveData<List<StudentsDetails>>
-    // ELIMINAR ALL DATA
+
     @Query("DELETE FROM student_details")
     fun deleteAll()
 

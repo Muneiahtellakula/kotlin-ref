@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.roomdatabase.Database.StudentDatabase
@@ -18,6 +19,7 @@ lateinit var student_name:EditText
     lateinit var result_tv_name:TextView
     lateinit var result_tv_age:TextView
     lateinit var studentDataBase: StudentDatabase
+   // val modelList:LiveData<List<StudentsDetails>>
 lateinit var mainViewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,5 +70,17 @@ lateinit var mainViewModel: MainViewModel
             result_tv_name.append("Name:"+i.student_name+"\n\n")
             result_tv_age.append("Age:"+i.student_age+"\n\n")
         }
+    }
+
+    fun removeData(view: View) {
+        mainViewModel.delete()
+    }
+    fun updateData(view: View) {
+        val a : Int = (student_age.text.toString()).toInt()
+        val studentsDetails = StudentsDetails(student_name = a.toString())
+        mainViewModel.update(studentsDetails)
+       // mainViewModel.allWords
+
+
     }
 }
