@@ -3,25 +3,23 @@ package com.example.roomdatabase.Database
 import android.app.Application
 import androidx.lifecycle.LiveData
 
-class StudentRepository (application: Application){
-    private val studentDao:StudentDao
-    private val studentList:LiveData<List<StudentsDetails>>
+class StudentRepository(application: Application){
+
+    private val studentDao : StudentDao
+    private val studentlist : LiveData<List<StudentsDetails>>
+
     init {
-        val studentDataBase:StudentDataBase= StudentDataBase.getInstance(application)
-        studentDao=studentDataBase.stdentDao
-        studentList=studentDao.getAll()
-
+        val studentDatabase:StudentDatabase = StudentDatabase.getInstance(application)
+        studentDao = studentDatabase.studentDao
+        studentlist = studentDao.getAll()
     }
 
-    private fun insertMethod(studentsDetails: StudentsDetails) {
-        studentDao.insertValues(studentsDetails)
-
-
+    fun getAll():LiveData<List<StudentsDetails>>{
+        return studentlist
     }
 
-    private fun getAllDataFromRep():LiveData<List<StudentsDetails>> {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        return  studentList
+    fun insert(studentDetails: StudentsDetails){
+        studentDao.insert(studentDetails)
     }
 
 }

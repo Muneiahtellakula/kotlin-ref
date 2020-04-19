@@ -7,16 +7,20 @@ import com.example.roomdatabase.Database.StudentDao
 import com.example.roomdatabase.Database.StudentRepository
 import com.example.roomdatabase.Database.StudentsDetails
 
-class MainViewModel(application: Application) :AndroidViewModel(application){
 
-    private val studentRepository: StudentRepository
-    private val allStudents: LiveData<List<StudentsDetails>>
+
+class MainViewModel(application:Application):AndroidViewModel(application)
+{
+    val studentRepository : StudentRepository
+    val allStudents : LiveData<List<StudentsDetails>>
+
     init {
-        studentRepository=StudentRepository(application)
-        allStudents = studentRepository.getAllDataFromRep()
+        studentRepository = StudentRepository(application)
+        allStudents = studentRepository.getAll()
+
     }
 
     fun insert(studentDetails: StudentsDetails){
-        studentRepository.(studentDetails)
+        studentRepository.insert(studentDetails)
     }
 }

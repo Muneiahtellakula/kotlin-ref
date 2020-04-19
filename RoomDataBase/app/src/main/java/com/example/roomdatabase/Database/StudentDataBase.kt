@@ -5,29 +5,28 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [StudentsDetails::class],version = 1,exportSchema = false)//data base strures file save if need true
-abstract class StudentDataBase :RoomDatabase() {
-    abstract val stdentDao: StudentDao
+@Database(entities = [StudentsDetails::class],version = 1,exportSchema = false)
+abstract class StudentDatabase : RoomDatabase(){
 
-    companion object{
+    abstract val studentDao : StudentDao
 
-        @Volatile//doesnot store
-        var INSTANCE:StudentDataBase? =null//cached var instance cann't store
-        fun getInstance(context:Context):StudentDataBase{
+    companion object {
 
+        @Volatile
+        var INSTANCE : StudentDatabase? = null
+
+        fun getInstance(context: Context) : StudentDatabase{
             synchronized(this){
-                var instance=INSTANCE
-                if (instance==null){
-                    instance= Room.databaseBuilder(context,StudentDataBase::class.java,"studentDb").fallbackToDestructiveMigration()
-                        .build()
-                    INSTANCE=instance
-
+                var instance = INSTANCE
+                if(instance == null)
+                {
+                    instance = Room.databaseBuilder(context,StudentDatabase::class.java,"studentdb").fallbackToDestructiveMigration().allowMainThreadQueries().build()
+                    INSTANCE = instance
                 }
                 return instance
             }
-
         }
 
-
     }
+
 }

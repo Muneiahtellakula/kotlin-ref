@@ -1,0 +1,54 @@
+Step 01:
+Base components for Room database in Android is:
+Database:
+It contains the holder and serves as the main access point for the connection.
+It is an abstract class extends with RoomDatabase and annoted with @Database.
+Entity:
+It represent the table within the database.
+DAO:
+It contains the method used for accessing the database.
+Repository:
+It is used to managing multiple data sources.
+ViewModel:
+It works as a communication between Repository and UI.
+LiveData:
+It is a data holder class. It observes automatically when data has changed.
+We will manage three values in database:
+Id (Auto Increment) : It is an unique id of Task created.
+TaskName : It is a name of Task.
+TaskDateTime : It is a date & time of Task created.
+Now We will manage datbase query for different CRUD operation for this created table.
+
+Step 02 : CREATE
+Create new task.
+We will create a method named "createTask()".
+method "repositoryTask.createTask(model)(...)" will insert entry in to created database.
+Step 03 : READ
+Read all task or task by ID.
+We will create three methods for different read related operation.
+"getTotalTaskCount()" : It will give count of total entries available in database.
+"readAllTask()" : It will read all entries available by values in database.
+"readTaskByID()" : It will read entry by given id if available in database.
+Here most important thing is you will get return data in LiveData class, so you need to formate it. For this you can use Observer class methods.
+Use below method for observing LiveData:
+This method will return multiple data:
+repositoryTask.readAllTask().observe(ActivityMain.this, new Observer<List<ModelTask>>() {
+    @Override
+    public void onChanged(List<ModelTask> models) {
+    }
+});
+This method will return single object:
+repositoryTask.readTaskByID(...).observeForever(new Observer<ModelTask>() {
+    @Override
+    public void onChanged(ModelTask model) {
+    }
+});
+Step 04 : UPDATE
+Update task.
+We will create a method named "updateTask()".
+method "repositoryTask.updateTask(model)" will updte enter of given id by necessary values in to database.
+Step 05 : DELETE
+Delete task.
+We will create a method named "deleteTask()".
+method "repositoryTask.deleteTask(model)" will delete entry of given id in to database.
+Read more about Room database operations in Android here: Room
