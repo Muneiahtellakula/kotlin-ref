@@ -27,12 +27,13 @@ class MainViewModel(application:Application):AndroidViewModel(application)
     fun delete(){
         studentRepository.deleteAll()
     }
+
     fun update(studentDetails: StudentsDetails){
         studentRepository.update(studentDetails)
     }
     // Delete solo  DATA
     fun deleteWord(studentDetails: StudentsDetails) {
-        studentRepository.deleteWord(studentDetails)
+        studentRepository.deleteSolo(studentDetails)
 
     }
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:id="@+id/result_id"
+            android:textSize="20sp"
+            android:textColor="#3F51B5"
+            android:textStyle="italic"
+            android:text="Id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:id="@+id/result_name"
+            android:textSize="20sp"
+            android:textColor="#FF5722"
+            android:textStyle="italic"
+            android:text="Name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:id="@+id/result_age"
+            android:textSize="20sp"
+            android:textColor="#E91E63"
+            android:textStyle="bold|italic"
+            android:text="age"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

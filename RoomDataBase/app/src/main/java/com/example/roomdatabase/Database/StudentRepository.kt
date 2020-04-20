@@ -39,7 +39,7 @@ class StudentRepository(application: Application){
 
     /* ---------------- Rid SOLO DATA---------------- */
 
-    fun deleteWord(studentDetails: StudentsDetails) {
+    fun deleteSolo(studentDetails: StudentsDetails) {
         deleteWordAsyncTask(studentDao).execute(studentDetails)
     }
 
