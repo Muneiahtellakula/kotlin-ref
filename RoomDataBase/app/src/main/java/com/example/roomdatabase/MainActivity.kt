@@ -13,6 +13,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomdatabase.Database.StudentDatabase
@@ -91,12 +92,7 @@ lateinit var student_name:EditText
         mainViewModel.delete()
 
     }
-    fun updateData() {
-        val n = student_name.text.toString()
-        val a : Int = (student_age.text.toString()).toInt()
-       val studentsDetails = StudentsDetails(student_name = n,student_age = a)
-        mainViewModel.update(studentsDetails)
-    }
+
    // class RecyclerAdapter(val context: Context,val l:List<StudentsDetails>):RecyclerView.Adapter<RecylerViewHolder>(){
     class RecyclerAdapter(val context: Context):ListAdapter<StudentsDetails,RecylerViewHolder>(StudentDiffUtiill()){
 
@@ -150,6 +146,18 @@ lateinit var student_name:EditText
         val student_id:TextView=itemView.findViewById(R.id.result_id)
         val student_name:TextView=itemView.findViewById(R.id.result_name)
         val student_age:TextView=itemView.findViewById(R.id.result_age)
+
+    }
+
+    fun updateData(view: View) {
+        val n = student_name.text.toString()
+        val a : Int = (student_age.text.toString()).toInt()
+        val studentsDetails = StudentsDetails(student_name = n,student_age = a)
+        mainViewModel.update(studentsDetails)
+        val ra=RecyclerAdapter(this)
+        //val ra=RecyclerAdapter(this,list)
+      ///  recyclerView.layoutManager
+        recyclerView.adapter=ra
 
     }
 }
