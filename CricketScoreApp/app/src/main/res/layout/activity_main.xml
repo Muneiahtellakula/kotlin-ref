@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="s"
+            type="com.muneiah.cricketscoreapp.ScoreMainViewModel" />
+    </data>
+
+    <ScrollView style="@style/App_layout">
+
+        <LinearLayout
+            style="@style/App_layout"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                style="@style/App_layout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/App_layout"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/App_textview_title"
+                        android:text="@string/teamA" />
+
+                    <TextView
+                        android:id="@+id/scoreA"
+                        style="@style/App_textview_score"
+                        android:text="@string/score" />
+
+                    <TextView
+                        android:id="@+id/oversA"
+                        style="@style/App_textview_title"
+                        android:text="@string/overs" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    style="@style/App_layout"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/App_textview_title"
+                        android:text="@string/teamB" />
+
+                    <TextView
+                        android:id="@+id/scoreB"
+                        style="@style/App_textview_score"
+                        android:text="@string/score" />
+
+                    <TextView
+                        android:id="@+id/oversB"
+                        style="@style/App_textview_title"
+                        android:text="@string/overs" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/endInnings"
+                style="@style/App_button_full"
+                android:onClick="endInnings"
+                android:text="End Innings" />
+
+            <LinearLayout
+                android:id="@+id/editor"
+                style="@style/App_layout">
+
+                <LinearLayout style="@style/App_layout_hori">
+
+                    <EditText
+                        android:id="@+id/runs"
+                        style="@style/App_et"
+                        android:text="0" />
+
+                    <Button
+                        style="@style/App_button_half"
+                        android:onClick="submitRuns"
+                        android:text="Runs" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/wickets"
+                    style="@style/App_button_full"
+                    android:onClick="submitWickets"
+                    android:text="Wicket" />
+
+                <LinearLayout style="@style/App_layout_hori">
+
+                    <EditText
+                        android:id="@+id/wides"
+                        style="@style/App_et"
+                        android:text="0" />
+
+                    <Button
+                        style="@style/App_button_half"
+                        android:onClick="submitWide"
+                        android:text="Wide/NoBall Runs" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
