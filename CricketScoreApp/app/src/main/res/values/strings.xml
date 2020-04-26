@@ -2,6 +2,6 @@
     <string name="app_name">CricketScoreApp</string>
     <string name="teamA">Team A</string>
     <string name="teamB">Team B</string>
-    <string name="score">0/0 </string>
-    <string name="overs">0.0 </string>
+    <string name="score">0/0%d</string>
+    <string name="overs">0.0%d</string>
 </resources>

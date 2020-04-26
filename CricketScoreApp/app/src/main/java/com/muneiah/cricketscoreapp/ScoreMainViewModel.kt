@@ -2,6 +2,7 @@ package com.muneiah.cricketscoreapp
 
 import android.app.Application
 import android.view.View
+import android.widget.EditText
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 
@@ -14,6 +15,8 @@ class ScoreMainViewModel(application: Application): AndroidViewModel(application
     var over: Int = 0
     var balls: Int = 0
     var A = true
+    var oversA:Int=0
+    var oversB:Int=0
 
     init {
         scoreReproisitory = ScoreReproisitory(application)
@@ -24,37 +27,8 @@ class ScoreMainViewModel(application: Application): AndroidViewModel(application
         scoreReproisitory.insert(scoredetailsEntity)
     }
 
-    /*fun endInnings(view: View?) {
-        if (!A) {
-            reset(view)
-        } else {
-            A = false
-            run = 0
-            wickets = 0
-            over = 0
-            balls = 0
-            // dataBinding.endInnings.text = "End 2nd Inninigs"
-        }
-
-    }*/
-
-
-   /* fun reset(view: View?) {
-        run = 0
-        wickets = 0
-        over = 0
-        balls = 0
-        A = true
-        setOversA()
-        setOversB()
-        setScoreA()
-        setScoreB()
-       *//* dataBinding.editor.visibility = View.VISIBLE
-        dataBinding.endInnings.text = "End innings"*//*
-    }*/
-   /* fun submitRuns(view: View?) {
-        // runs = findViewById<View>(R.id.runs) as EditText
-        run = run + dataBinding.runs!!.text.toString().toInt()
+    fun submitRuns() {
+       // run = run + dataBinding.runs!!.text.toString().toInt()
         balls++
         if (balls > 6) {
             balls = 0
@@ -67,22 +41,32 @@ class ScoreMainViewModel(application: Application): AndroidViewModel(application
             setScoreB()
             setOversB()
         }
-    }*/
-  /*  fun setOversA() {
-        dataBinding.oversA!!.text = over.toString() + "." + balls
+    }
+
+    fun submitWide() {
+       //run = run + wide.text.toString().toInt()
+        if (A) {
+            setScoreA()
+        } else {
+            setScoreB()
+        }
+    }
+
+    fun setOversA() {
+       // oversA = over + "." + balls
 
     }
 
     fun setOversB() {
-        dataBinding.oversB!!.text = over.toString() + "." + balls
+      //  dataBinding.oversB!!.text = over.toString() + "." + balls
     }
 
     fun setScoreA() {
-        dataBinding.scoreA!!.text = "$run/$wickets"
+       // dataBinding.scoreA!!.text = "$run/$wickets"
     }
 
     fun setScoreB() {
-        dataBinding.scoreB!!.text = "$run/$wickets"
-    }*/
+      //  dataBinding.scoreB!!.text = "$run/$wickets"
+    }
 
 }

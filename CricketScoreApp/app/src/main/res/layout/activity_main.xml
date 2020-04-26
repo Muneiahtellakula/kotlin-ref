@@ -29,7 +29,7 @@
                     <TextView
                         android:id="@+id/scoreA"
                         style="@style/App_textview_score"
-                        android:text="@string/score" />
+                        android:text="@{@string/score(s.run)}" />
 
                     <TextView
                         android:id="@+id/oversA"
@@ -54,7 +54,7 @@
                     <TextView
                         android:id="@+id/scoreB"
                         style="@style/App_textview_score"
-                        android:text="@string/score" />
+                        android:text="@{@string/score(s.run)}" />
 
                     <TextView
                         android:id="@+id/oversB"
@@ -66,9 +66,8 @@
             <Button
                 android:id="@+id/endInnings"
                 style="@style/App_button_full"
-                android:onClick="endInnings"
+                android:onClick="@{()->s.endInnings()}"
                 android:text="End Innings" />
-
             <LinearLayout
                 android:id="@+id/editor"
                 style="@style/App_layout">
@@ -82,14 +81,14 @@
 
                     <Button
                         style="@style/App_button_half"
-                        android:onClick="submitRuns"
+                        android:onClick="@{()->s.submitRuns()}"
                         android:text="Runs" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/wickets"
                     style="@style/App_button_full"
-                    android:onClick="submitWickets"
+                    android:onClick="@{()->s.submitWickets()}"
                     android:text="Wicket" />
 
                 <LinearLayout style="@style/App_layout_hori">
@@ -101,7 +100,7 @@
 
                     <Button
                         style="@style/App_button_half"
-                        android:onClick="submitWide"
+                        android:onClick="@{()->s.submitWide()}"
                         android:text="Wide/NoBall Runs" />
                 </LinearLayout>
             </LinearLayout>
