@@ -1,6 +1,6 @@
 ## NAVIGATION COMPONENT
  #### Introducing Navigation Component
-* Navigation around an app ,by which i mean moving from one screen to another is an absolutely fundamental part of Android Development 
+ * Navigation around an app ,by which i mean moving from one screen to another is an absolutely fundamental part of Android Development 
 * Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content within your app. 
 * Android Jetpack's Navigation component helps you implement navigation, from simple button clicks to more complex patterns, such as app bars and the navigation drawer. 
 * The Navigation component also ensures a consistent and predictable user experience by adhering to an established
@@ -222,7 +222,8 @@ task clean(type: Delete) {
 
 </LinearLayout>
 
-#### Navigation Graph Design follows 
+```
+ Navigation Graph Design follows 
 
 <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/graph.jpg"/>
 
@@ -234,79 +235,76 @@ task clean(type: Delete) {
 #### navigation_graph.xml file
 
 ``` xml
+ <?xml version="1.0" encoding="utf-8"?>
+ <navigation
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/navigation_graph"
+     app:startDestination="@id/homeFragment">
+     <fragment
+         android:id="@+id/homeFragment"
+         android:name="com.muneiah.mynavcomponentdemo.HomeFragment"
+         android:label="fragment_home"
+         tools:layout="@layout/fragment_home" >
+         <action
+             android:id="@+id/action_homeFragment_to_oneFragment"
+             app:destination="@id/oneFragment" />
+         <action
+             android:id="@+id/action_homeFragment_to_twoFragment"
+             app:destination="@id/twoFragment" />
+         <action
+             android:id="@+id/action_homeFragment_to_threeFragment"
+             app:destination="@id/threeFragment" />
+     </fragment>
+     <fragment
+         android:id="@+id/oneFragment"
+         android:name="com.muneiah.mynavcomponentdemo.OneFragment"
+         android:label="fragment_one"
+         tools:layout="@layout/fragment_one" />
+     <fragment
+         android:id="@+id/twoFragment"
+         android:name="com.muneiah.mynavcomponentdemo.TwoFragment"
+         android:label="fragment_two"
+         tools:layout="@layout/fragment_two" />
+     <fragment
+         android:id="@+id/threeFragment"
+         android:name="com.muneiah.mynavcomponentdemo.ThreeFragment"
+         android:label="fragment_three"
+         tools:layout="@layout/fragment_three" />
+ </navigation>
 
-<?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_graph"
-    app:startDestination="@id/homeFragment">
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.muneiah.mynavcomponentdemo.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_oneFragment"
-            app:destination="@id/oneFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_twoFragment"
-            app:destination="@id/twoFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_threeFragment"
-            app:destination="@id/threeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/oneFragment"
-        android:name="com.muneiah.mynavcomponentdemo.OneFragment"
-        android:label="fragment_one"
-        tools:layout="@layout/fragment_one" />
-    <fragment
-        android:id="@+id/twoFragment"
-        android:name="com.muneiah.mynavcomponentdemo.TwoFragment"
-        android:label="fragment_two"
-        tools:layout="@layout/fragment_two" />
-    <fragment
-        android:id="@+id/threeFragment"
-        android:name="com.muneiah.mynavcomponentdemo.ThreeFragment"
-        android:label="fragment_three"
-        tools:layout="@layout/fragment_three" />
-</navigation>
 ```
 
-  
-  ```
+
  #### Step 8:At Home_Fragemt.kt connct the three buttons id's then set onClick event listner 
  
- 
- 
  #### First_fragment.kt
-  ``` kotlin
+ ``` Kotlin
       package com.muneiah.mynavcomponentdemo
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+     import android.os.Bundle
+     import androidx.fragment.app.Fragment
+     import android.view.LayoutInflater
+     import android.view.View
+     import android.view.ViewGroup
 
-/**
- * A simple [Fragment] subclass.
- */
-class OneFragment : Fragment() {
+     /**
+      * A simple [Fragment] subclass.
+      */
+     class OneFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_one, container, false)
-    }
+         override fun onCreateView(
+             inflater: LayoutInflater, container: ViewGroup?,
+             savedInstanceState: Bundle?
+         ): View? {
+             // Inflate the layout for this fragment
+             return inflater.inflate(R.layout.fragment_one, container, false)
+         }
 
-}
-
-  ```
+        }
+  ``` 
+  
   #### MainActivity.kt file 
   
   ``` kotlin
