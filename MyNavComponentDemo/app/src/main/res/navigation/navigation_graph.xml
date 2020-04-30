@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
     app:startDestination="@id/homeFragment">
-
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.muneiah.mynavcomponentdemo.HomeFragment"
@@ -15,11 +14,11 @@
             android:id="@+id/action_homeFragment_to_oneFragment"
             app:destination="@id/oneFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_threeFragment"
-            app:destination="@id/threeFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_twoFragment"
             app:destination="@id/twoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_threeFragment"
+            app:destination="@id/threeFragment" />
     </fragment>
     <fragment
         android:id="@+id/oneFragment"
