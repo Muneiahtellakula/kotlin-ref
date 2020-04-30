@@ -28,7 +28,7 @@
 
     <Button
         android:id="@+id/trd"
-        android:text="Three"
+        android:text="Third"
         android:background="@android:color/holo_red_dark"
         android:layout_width="match_parent"
         android:layout_height="0dp"
