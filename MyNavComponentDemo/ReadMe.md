@@ -154,16 +154,16 @@ task clean(type: Delete) {
   * It shows visually all the destinations that can be reached from a given destination. Android Studio displays the graph in its Navigation Editor. Here's part of the starting navigation graph you'll create for your app:
   * Right click on res directory then new android resourses then click dropdown selectnavigation :res/navigation/ 
   
-  <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/nav_dir_creation.JPG" />
-  * res/navigation/navigation_graph.xml
+  <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/graph.jpg?raw=true"/>
   
-  <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/navigationgraph_creation.png?raw=true" />
+   
+  <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/final_navi_graph_dessti.jpg?raw=true"/>
   
   #### Step 6:Create three blank fragments(both xml and kotlin)
  
  * Right click on Java first package then new/fragment/fragment_blank
  
- ##### fragment_first.xml
+ #### fragment_first.xml
  
  ``` xml 
  <?xml version="1.0" encoding="utf-8"?>
@@ -177,7 +177,7 @@ task clean(type: Delete) {
 
 </FrameLayout>  
   ```
-  ##### note:Same as remaing two fragments design 
+  #### note:Same as remaing two fragments design 
   
   ** Create a new fragemt naming as Home_fragement for constant 
   ** home_fragemt.xml **
@@ -231,7 +231,7 @@ task clean(type: Delete) {
 
 <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/final_navi_graph_dessti.jpg"/>
 
-##### navigation_graph.xml file
+#### navigation_graph.xml file
 
 ``` xml
 
@@ -281,7 +281,7 @@ task clean(type: Delete) {
  
  
  
- ##### First_fragment.kt
+ #### First_fragment.kt
   ``` kotlin
       package com.muneiah.mynavcomponentdemo
 
@@ -307,7 +307,7 @@ class OneFragment : Fragment() {
 }
 
   ```
-  ##### MainActivity.kt file 
+  #### MainActivity.kt file 
   
   ``` kotlin
   package com.muneiah.mynavcomponentdemo
@@ -325,7 +325,7 @@ class MainActivity : AppCompatActivity() {
 
   
   ```
-  ##### Home_Fragment **
+  #### Home_Fragment **
   ``` kotlin
   package com.muneiah.mynavcomponentdemo
 
