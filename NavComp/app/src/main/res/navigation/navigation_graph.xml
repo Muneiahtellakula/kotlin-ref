@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/HFragment">
+
+    <fragment
+        android:id="@+id/HFragment"
+        android:name="com.muneiah.navcomp.HFragment"
+        android:label="fragment_h"
+        tools:layout="@layout/fragment_h" >
+        <action
+            android:id="@+id/action_HFragment_to_FFragment"
+            app:destination="@id/FFragment" />
+        <action
+            android:id="@+id/action_HFragment_to_SFragment"
+            app:destination="@id/SFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FFragment"
+        android:name="com.muneiah.navcomp.FFragment"
+        android:label="fragment_f"
+        tools:layout="@layout/fragment_f" />
+    <fragment
+        android:id="@+id/SFragment"
+        android:name="com.muneiah.navcomp.SFragment"
+        android:label="fragment_s"
+        tools:layout="@layout/fragment_s" />
+</navigation>
