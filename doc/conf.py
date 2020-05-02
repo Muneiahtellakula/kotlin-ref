@@ -128,7 +128,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'Kotlin-Documentation.tex', u'Kotlin-Documentation Documentation',
-     u'pavan', 'manual'),
+     u'muni', 'manual'),
 ]
 
 
