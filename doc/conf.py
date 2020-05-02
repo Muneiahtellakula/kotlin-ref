@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Kotlin-Documentation'
+project = u'Kotlin-Refarence'
 copyright = u'2020, pavan'
-author = u'pavan'
+author = u'Muneiah Tellakula'
 
 # The short X.Y version
 version = u''
