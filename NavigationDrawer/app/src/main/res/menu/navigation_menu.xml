@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:title="Walk"
+    android:id="@+id/wlak_id"
+    android:icon="@drawable/ic_directions_walk_black_24dp">
+
+</item>
+    <item
+        android:title="right"
+        android:id="@+id/edit"
+        android:icon="@drawable/ic_subdirectory_arrow_right_black_24dp"
+        />
+    <item android:title="settings"
+        >
+        <menu>
+            <item android:title="Set 1"
+                android:id="@+id/set1"></item>
+            <item android:title="Set 2"
+                android:id="@+id/set2"></item>
+
+        </menu>
+
+
+    </item>
+</menu>
