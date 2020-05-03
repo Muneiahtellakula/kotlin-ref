@@ -1,8 +1,12 @@
 package com.muneiah.caronaupdatenotify
 
 
+import android.graphics.drawable.Animatable
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.MergeAdapter
@@ -42,6 +46,33 @@ class MainActivity : AppCompatActivity() {
 
         binding.swipeRefreshLayout.setOnRefreshListener {
             loadData()
+        }
+
+
+
+    }
+    // onOptionsItemSelected(item:MenuItem)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu,menu)
+        return super.onCreateOptionsMenu(menu)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+        R.id.abb -> {
+
+            AlertDialog.Builder(this)
+                .setTitle("About Me..!")
+                .setMessage("I'm Muneiah Tellakula..!")
+                .setIcon(R.drawable.muni)
+                                .show()
+            return true
+        }
+
+
+            else ->super.onOptionsItemSelected(item)
         }
     }
 
