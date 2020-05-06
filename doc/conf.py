@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Kotlin-Refarence'
-copyright = u'2020, pavan'
+copyright = u'2020, Muni'
 author = u'Muneiah Tellakula'
 
 # The short X.Y version
