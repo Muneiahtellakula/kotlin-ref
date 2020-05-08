@@ -27,7 +27,7 @@ var c=0
 
     }
 
- 
+
     fun showtoast(view: View) {
         Toast.makeText(this
         ,"count is :"+textLabel.text.toString(),Toast.LENGTH_SHORT).show()

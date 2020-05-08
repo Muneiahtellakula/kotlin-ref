@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 
 class SplashActivity : AppCompatActivity() {
     private var mDelayHandler: Handler? = null
@@ -24,6 +27,12 @@ lateinit var animat:AnimationDrawable
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         iv=findViewById(R.id.iv_icons)
+        Glide.with(this).load(R.drawable.india)
+
+            .skipMemoryCache(true) //2
+            .diskCacheStrategy(DiskCacheStrategy.NONE) //3
+            .transform(CircleCrop()) //4
+            .into(iv)
 /*
         iv.setImageResource(R.drawable.splash_anim)
         animat= iv.background as AnimationDrawable
