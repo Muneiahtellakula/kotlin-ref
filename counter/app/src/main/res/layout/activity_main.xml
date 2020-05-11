@@ -34,8 +34,8 @@
 
     <TextSwitcher
         android:id="@+id/swit"
-        android:layout_width="60dp"
-        android:layout_height="82dp"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
         android:layout_below="@+id/cot"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp"
@@ -132,6 +132,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="9dp"
         app:adSize="SMART_BANNER"
+        android:background="@color/colorAccent"
         app:adUnitId="ca-app-pub-3940256099942544~3347511713"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

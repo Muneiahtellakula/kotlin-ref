@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     lateinit var mAdView : AdView
 
-    val pray = arrayListOf("muni","reddy", "Pav","Krish", "Anu","vali", "sai","vara","chai","pal","siv")
+    val pray = arrayListOf("Muneiah","Rami Reddy", "Pavan kumar","Krisha", "Anusha","Masthan vali", "Sai Shankar","Chaithanya","Siva","Gopal","Vara Prasad")
     var currentText = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         swit.setText(pray[currentText])
         nex.setOnClickListener {
-            if (currentText !=8)
+            if (currentText !=10)
                 currentText++
             else
                 currentText = 0
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             if (currentText >0)
                 currentText--
             else
-                currentText = 8
+                currentText = 10
             swit.setText(pray[currentText])
         }
         MobileAds.initialize(this)
@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private operator fun invoke(string: String): Context? {
+
         return null
 
     }
