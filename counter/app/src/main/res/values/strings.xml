@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Counter</string>
+    <string name="_100000">0</string>
+    <string name="Prev">Prev</string>
+    <string name="Next">Next</string>
+    <string name="Add">ADD</string>
+    <string name="Astagfurllah">Astagfurllah</string>
+    <string name="Reset">Reset</string>
+    <string name="_10">10</string>
+    <string name="_0">0</string>
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="adView"> AD VIEW</string>
+</resources>
