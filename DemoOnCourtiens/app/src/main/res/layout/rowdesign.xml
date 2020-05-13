@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_flag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textView_count_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CountyName " />
+
+    <TextView
+        android:id="@+id/cases_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cases" />
+
+    <TextView
+        android:id="@+id/textView_ative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active" />
+
+    <TextView
+        android:id="@+id/textView_activetoday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TexToastView" />
+
+    <TextView
+        android:id="@+id/textViewDeath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_todaydeath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_recovered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_critical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_todayCaes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>
