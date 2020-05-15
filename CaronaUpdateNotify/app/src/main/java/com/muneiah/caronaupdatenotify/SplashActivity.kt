@@ -31,13 +31,9 @@ lateinit var animat:AnimationDrawable
 
             .skipMemoryCache(true) //2
             .diskCacheStrategy(DiskCacheStrategy.NONE) //3
-            .transform(CircleCrop()) //4
+          //  .transform(CircleCrop()) //4
             .into(iv)
-/*
-        iv.setImageResource(R.drawable.splash_anim)
-        animat= iv.background as AnimationDrawable
-*/
-//Initialize the Handler
+
         mDelayHandler = Handler()
 
         //Navigate with delay
@@ -53,27 +49,5 @@ lateinit var animat:AnimationDrawable
         super.onDestroy()
     }
 
-    /*override fun onResume() {
-        super.onResume()
-        animat.start();
 
-        checkAnimationStatus(50, animat);
-    }
-
-    private fun checkAnimationStatus(i: Int, animat: AnimationDrawable) {
-       *//* Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (animationDrawable.getCurrent() != animationDrawable.getFrame(animationDrawable.getNumberOfFrames() - 1))
-                    checkAnimationStatus(time, animationDrawable);
-                else finish();
-            }
-        }, time);
-    }*//*
-        val handler= Handler()
-        handler.postDelayed(mRunnable)
-
-    }
-*/
 }

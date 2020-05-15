@@ -2,6 +2,7 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="about me"
-        android:id="@+id/abb"/>
+    <item
+        android:id="@+id/settins_id"
+        android:title="settings" />
 </menu>

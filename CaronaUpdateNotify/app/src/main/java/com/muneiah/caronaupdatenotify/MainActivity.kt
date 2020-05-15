@@ -1,6 +1,7 @@
 package com.muneiah.caronaupdatenotify
 
 
+import android.content.Intent
 import android.graphics.drawable.Animatable
 import android.os.Bundle
 import android.view.Menu
@@ -55,20 +56,17 @@ class MainActivity : AppCompatActivity() {
     // onOptionsItemSelected(item:MenuItem)
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu,menu)
+        menuInflater.inflate(R.menu.settings,menu)
         return super.onCreateOptionsMenu(menu)
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-        R.id.abb -> {
+        R.id.settins_id -> {
 
-            AlertDialog.Builder(this)
-                .setTitle("About App ")
-                .setMessage("")
-                .setIcon(R.drawable.muni)
-                                .show()
+           val intent=Intent(this,SettingsActivity::class.java)
+            startActivity(intent)
             return true
         }
 
