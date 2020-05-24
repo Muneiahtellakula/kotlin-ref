@@ -1,12 +1,12 @@
 ## NAVIGATION COMPONENT
- #### Introducing Navigation Component
- * Navigation around an app ,by which i mean moving from one screen to another is an absolutely fundamental part of Android Development 
-* Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content within your app. 
+### Introducing Navigation Component
+* Navigation around an app ,by which i mean moving from one screen to another is an absolutely fundamental part of Android Development 
+* Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content      within your app. 
 * Android Jetpack's Navigation component helps you implement navigation, from simple button clicks to more complex patterns, such as app bars and the navigation drawer. 
 * The Navigation component also ensures a consistent and predictable user experience by adhering to an established
 ## What is a navigation Component ?
 **“ A Navigation component is a collection of libraries ,a plugin and tooling for unifying and simplifying android navigation ”**
-#### Navigation Component Benefits
+### Navigation Component Benefits
 * Simplified setup for common navigation pattern
 * Handling fragment transactions.
 * Handling Up and Back actions correctly by default.
@@ -19,7 +19,7 @@
     * Fragments
     * Activities
     * Can also be extended to work with custom destination
-#### Navigation Component parts
+### Navigation Component parts
   * The Navigation component consists of three key parts that are:
     * Navigation graph
     * NavHost
@@ -30,7 +30,7 @@
  * **NavController(fragment):** An object that manages app navigation within a NavHost.   The NavController orchestrates the swapping of destination content in the NavHost as users move throughout your app
 
   
-  ## Practical app
+ ## Let we gor for Practical
   <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/nav.gif" width="250" height="350" />
   
  ### Get Started with the Navigation Component
