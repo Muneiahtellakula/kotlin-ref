@@ -6,3 +6,4 @@
 ## https://medium.com/androiddevnotes/5-awesome-open-source-android-kotlin-apps-with-mvvm-dagger-coroutines-retrofit-and-room-98b65296b199
 ## https://blog.mindorks.com/kotlin-android-interview-questions
 ## [Data Passing between activity to fragment ](https://johncodeos.com/how-to-pass-data-between-fragments-in-android-using-kotlin)
+## [Data Passing b/w two Fragments through th VIEWMODEL](https://heartbeat.fritz.ai/passing-data-between-fragments-on-android-using-viewmodel-d47fa6773f9c)
